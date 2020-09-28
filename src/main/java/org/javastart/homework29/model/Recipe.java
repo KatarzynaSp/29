@@ -29,11 +29,22 @@ public class Recipe {
     }
 
 
+    public Recipe(String name, String description, String url, List<Ingredient> ingredients, Category category) {
+        this.name = name;
+        this.description = description;
+        this.url = url;
+        this.ingredients = ingredients;
+        this.category = category;
+    }
+
     public Recipe(String name, String description, String url, List<Ingredient> ingredients) {
         this.name = name;
         this.description = description;
         this.url = url;
         this.ingredients = ingredients;
+    }
+
+    public Recipe(Long id, String name) {
     }
 
     public void addIngredient(Ingredient ingredient) {

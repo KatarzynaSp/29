@@ -20,17 +20,7 @@
         <li class="col-lg-4"><a href="#" class="list-group-item active">Najciekawsze przepisy</a></li>
     </ul>
 
-
-    <ul class="nav nav-tabs" style="background-color: lightblue">
-        <li class="col-lg-2"><h4>Kategorie: </h4></li>
-
-        <li class="col-lg-2"><a href="/category/?category_Id=1"><h4>Sniadania</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=2"><h4>Zupy</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=3"><h4>Obiady</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=4"><h4>Przekąski</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=5"><h4>Desery</h4></a></li>
-    </ul>
-
+    <div th:replace="fragments :: Categories"></div>
 
     <div style="padding-right: 20%; padding-left: 20%">
         <h2>Dodaj przepis</h2>
@@ -64,7 +54,8 @@
             <div class="form-group row">
                 <label for="category" class="form-group col-md-4"> Wybierz kategorię:</label>
                 <div class="col-sm-7">
-                    <select th:field="*{category}" class="form-control" id="category" placeholder="wybierz kategorię">
+                    <select th:field="*{category}" class="form-control" id="category">
+                        <option value="" selected>wybierz kategorię</option>
                         <option th:each="category: ${categories}"
                                 th:text="${category.name}"
                                 th:value="${category.id}">
@@ -90,13 +81,12 @@
                     </table>
                 </div>
             </div>
-            <div class="form-group row" style="background-color: gray">
-                <label for="submit" class="col-sm-4 col-form-label">Zapisz</label>
+            <div class="form-group row">
+                <label for="submit" class="col-sm-4 col-form-label"></label>
                 <div class="col-sm-7">
-                    <button type="submit" class="btn btn-primary" id="submit" value="Dodaj przepis"
-                            th:placeholder="Dodaj"></button>
+                    <button type="submit" class="btn-lg btn-primary " id="submit">Dodaj</button>
+                    </divcol-sm-7>
                 </div>
-            </div>
         </form>
     </div>
 </div>

@@ -18,16 +18,15 @@
         <li class="col-lg-4"><a href="#" class="list-group-item active">Najciekawsze przepisy</a></li>
     </ul>
 
+    <div th:replace="fragments :: Categories"></div>
 
-    <ul class="nav nav-tabs" style="background-color: lightblue">
-        <li class="col-lg-2"><h4>Kategorie: </h4></li>
-
-        <li class="col-lg-2"><a href="/category/?category_Id=1"><h4>Sniadania</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=2"><h4>Zupy</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=3"><h4>Obiady</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=4"><h4>Przekąski</h4></a></li>
-        <li class="col-lg-2"><a href="/category/?category_Id=5"><h4>Desery</h4></a></li>
-    </ul>
+    <!--    <ul class="nav nav-tabs" style="background-color: lightblue">-->
+    <!--        <li class="col-lg-2"><h4>Kategorie: </h4></li>-->
+    <!--        <li class="col-lg-2" th:each="category: ${category}">-->
+    <!--            <a th:href="@{'/category/' + ${category.id}}">-->
+    <!--                <h3 th:text="${category.name}"></h3>-->
+    <!--            </a></li>-->
+    <!--    </ul>-->
 
 
     <div class="row">

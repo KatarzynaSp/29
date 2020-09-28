@@ -22,6 +22,17 @@
     </div>
 </div>
 
+
+<div th:fragment="Categories">
+    <ul class="nav nav-tabs" style="background-color: lightblue">
+        <li class="col-lg-2"><h4>Kategorie: </h4></li>
+        <li class="col-lg-2" th:each="category: ${category}">
+            <a th:href="@{'/category/' + ${category.id}}">
+                <h3 th:text="${category.name}"></h3>
+            </a></li>
+    </ul>
+
+
 </div>
 
 </body>
